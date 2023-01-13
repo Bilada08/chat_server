@@ -11,7 +11,7 @@ app.use(cors({
     origin: ['http://localhost:3000/', 'https://eice-chat.netlify.app/']
 }));
 app.use(express.json());
-app.use(express.urlencoded());
+app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
     res.send('Hello World');
